@@ -1,0 +1,13 @@
+Ler um número inteiro e apresentar uma mensagem informando se o número é par ou ímpar
+
+REPORT ZZ_PAR_OU_IMPAR_11.
+
+* Tela de seleção
+PARAMETERS V_NUM TYPE I.
+
+* Condição
+IF V_NUM MOD 2 = 0.
+  WRITE: 'Esse número é par, pois o resto de ', V_NUM, ' quando dividido por 2 é igual a 0'.
+ELSE.
+  WRITE: 'Esse número é impar, pois o resto de ', V_NUM, ' quando dividido por 2 não é igual a 0'.
+ENDIF.
