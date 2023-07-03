@@ -1,0 +1,19 @@
+Faça a declaração das variáveis para os identificadores a seguir:
+
+1. Rua
+2. Média
+3. Contador
+4. Preço
+5. Área
+6. Opção
+7. Telefone
+
+REPORT ZZ_EXERC01_11
+	
+DATA:     V_RUA               TYPE STRING,
+					V_MEDIA             TYPE I,  
+					V_CONTADOR          TYPE I,
+					V_PRECO             TYPE NETPR,
+					V_AREA              TYPE I,
+					V_OPCAO             TYPE STRING,
+					V_TELEFONE(11)      TYPE C.  
