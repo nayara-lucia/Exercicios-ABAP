@@ -1,0 +1,31 @@
+Faça um algoritmo para realizar as operações matemáticas de soma, subtração, divisão, multiplicação e resto. O algoritmo deve ler dois operandos e o sinal correspondente à operação desejada, no final deve ser impresso o resultado.
+
+REPORT ZZ_CALCULADORA_11.
+
+* Atribuições
+DATA : V_RESULT TYPE P.
+
+* Tela de seleção
+PARAMETERS : V_OPCAO TYPE C LENGTH 3,
+             V_OP1 TYPE P,
+             V_OP2 TYPE P.
+* Operações
+CASE V_OPCAO.
+  WHEN '+'.
+    V_RESULT = V_OP1 + V_OP2.
+    WRITE : 'O resultado: ', V_RESULT.
+  WHEN '-'.
+    V_RESULT = V_OP1 - V_OP2.
+    WRITE : 'O resultado: ', V_RESULT.
+  WHEN '*'.
+    V_RESULT = V_OP1 * V_OP2.
+    WRITE : 'O resultado: ', V_RESULT.
+  WHEN '/'.
+    V_RESULT = V_OP1 / V_OP2.
+    WRITE : 'O resultado: ', V_RESULT.
+  WHEN 'MOD'.
+    V_RESULT = V_OP1 MOD V_OP2.
+    WRITE : 'O resultado: ', V_RESULT.  
+  WHEN OTHERS.
+    WRITE : 'Operação inválida'.
+ENDCASE.
