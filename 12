@@ -1,0 +1,37 @@
+Faça um algoritmo que leia dois números inteiros e imprima duas sequências:
+
+1. A primeira sequência vai do menor número até o maior número
+2. E a segunda sequência vai do maior número até o menor número
+
+REPORT ZZ_SEQ_DECRESC_CRESC_11.
+
+* Atribuições
+DATA : V_1IT TYPE I VALUE '0',
+       V_2IT TYPE I VALUE '0',
+       V_NEG1 TYPE I VALUE '-1',
+       V_NEG2 TYPE I VALUE '-2'.
+* Tela de seleção
+PARAMETERS : V_CRESC TYPE I,
+             V_DESCR TYPE I.
+
+* Operações
+* Loop que percorre do menor para o maior
+WHILE V_1IT <= V_CRESC.
+  IF V_1IT < V_CRESC.
+    WRITE : V_1IT, ','.
+  ELSE.
+    WRITE : V_1IT, '.'.  
+  ENDIF.
+  V_1IT = V_1IT + 1.
+ENDWHILE.
+* Loop que vai do maior para o menor
+WRITE : / ' '.
+V_2IT = V_DESCR.
+WHILE V_2IT <= V_DESCR AND V_2IT > V_NEG1.
+  IF V_2IT > 0 AND V_2IT > V_NEG2.
+    WRITE : V_2IT, ','.   
+  ELSE.  
+    WRITE : V_2IT, '.'.
+  ENDIF. 
+  V_2IT = V_2IT - 1.
+ENDWHILE.
