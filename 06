@@ -1,0 +1,10 @@
+Efetuar a leitura de um determinado valor e apresentá-lo, caso não seja maior que três.
+
+REPORT ZZ_MAIOR_QUE_TRES_11.
+* Tela de seleção
+PARAMETERS: V_DESC TYPE I.
+* Operação
+IF V_DESC < 3. 
+  WRITE : / 'Esse valor cumpre a sentença pois é menor que 3',
+          / 'Valor digitado: ', V_DESC.
+ENDIF.
