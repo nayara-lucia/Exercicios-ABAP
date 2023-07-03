@@ -1,0 +1,14 @@
+Construir um algoritmo que leia quatro notas e imprima a média aritmética do aluno.
+
+REPORT ZZ_MEDIA_ALUNOS_11.
+* Variável de armazenamento
+DATA V_MEDIA TYPE P DECIMALS 2.
+* Tela de seleção
+PARAMETERS: NOTA1 TYPE P DECIMALS 2,
+            NOTA2 TYPE P DECIMALS 2,
+            NOTA3 TYPE P DECIMALS 2,
+            NOTA4 TYPE P DECIMALS 2.
+* Operação
+V_MEDIA = ( ( NOTA1 + NOTA2 + NOTA3 + NOTA4 ) / 4 ).
+* Saída
+WRITE: 'A média desse aluno é: ', V_MEDIA.
