@@ -1,0 +1,17 @@
+Faça um algoritmo que imprima a seguinte sequência: $1,2,3,4,5,...,100.
+
+REPORT ZZ_DE_UM_ATE_CEM_11.
+* Atribuições
+DATA : V_NUM TYPE I VALUE '1'.
+V_NUM = 1.
+* Operações
+WHILE V_NUM < 101.
+  IF V_NUM =< 99.
+    WRITE V_NUM.
+    WRITE ','.
+  ELSE.
+    WRITE V_NUM.
+    WRITE '.'.
+  ENDIF.  
+  V_NUM = V_NUM + 1.
+ENDWHILE.
