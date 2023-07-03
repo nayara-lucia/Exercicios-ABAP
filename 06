@@ -1,0 +1,17 @@
+Ler dois valores inteiros distintos e apresentar o maior dos dois números
+
+REPORT ZZ_COND_DOIS_VAL_11.
+* Tela de seleção
+PARAMETERS: V_NUM1 TYPE I,
+            V_NUM2 TYPE I.
+
+* Condições
+IF V_NUM1 > V_NUM2.
+  WRITE : 'Valor de NUM1 é maior, veja:', V_NUM1,'maior que', V_NUM2.
+ELSE.
+  IF V_NUM2 > V_NUM1.
+    WRITE : 'Valor de NUM2 é maior, veja:', V_NUM2,'maior que', V_NUM1.
+  ELSE.
+    WRITE : 'Os valores digitados são iguais'.
+  ENDIF.
+ENDIF.
