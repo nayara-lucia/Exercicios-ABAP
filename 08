@@ -1,0 +1,29 @@
+Faça um algoritmo que leia a altura e o sexo de uma pessoa, calcule e mostre seu peso ideal. Sabendo que:
+
+1. Para homens: (72,7*h) - 58
+2. Para mulheres: (62,1*h) - 44,7
+
+
+REPORT ZZ_PESO_IDEAL_11.
+DATA : V_MCON TYPE P LENGTH 2 DECIMALS 1 VALUE '62.1',
+       V_FCON TYPE P LENGTH 2 DECIMALS 1 VALUE '72.7',
+       V_MSEX TYPE P LENGTH 2 DECIMALS 1 VALUE '44.7',
+       V_FSEX TYPE I VALUE '58',
+       V_PESOI TYPE P.
+
+* Tela de seleção
+PARAMETERS: V_SEXO TYPE C,
+            V_ALT TYPE P LENGTH 2 DECIMALS 2.
+
+* Operações
+
+CASE V_SEXO.
+  WHEN 'F'.
+    V_PESOI =  ( V_FCON * V_ALT ) - V_FSEX.
+    WRITE : 'O peso ideal desse individuo: ', V_PESOI,'kg'.
+  WHEN 'M'.
+    V_PESOI = ( V_MCON * V_ALT ) - V_MSEX.
+    WRITE : 'O peso ideal desse individuo é: ', V_PESOI,'kg'.
+  WHEN OTHERS.
+    WRITE 'Você digitou uma opção inválida'.
+ENDCASE.
